@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://20f587kmg4q4"]
+
+[ext_resource type="Texture2D" uid="uid://bkk6dcbsk4coc" path="res://assets/Skyboxes/skybox-day.png" id="1_k1tqj"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tut5i"]
+panorama = ExtResource("1_k1tqj")
+
+[sub_resource type="Sky" id="Sky_26ons"]
+sky_material = SubResource("PanoramaSkyMaterial_tut5i")
+
+[sub_resource type="Environment" id="Environment_vl80j"]
+background_mode = 2
+sky = SubResource("Sky_26ons")
+
+[node name="SKY" type="Node3D" unique_id=222311777]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=68858604]
+environment = SubResource("Environment_vl80j")

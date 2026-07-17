@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c2qgota2l8xo4"]
+
+[ext_resource type="ArrayMesh" uid="uid://b7s4xgicwu31l" path="res://assets/cars/kart-oobi.fbx" id="1_52rcn"]
+[ext_resource type="Script" uid="uid://biqdg3iqnr03r" path="res://scripts/spacekart.gd" id="1_t8602"]
+
+[node name="spacekart" type="Node3D" unique_id=13251508]
+script = ExtResource("1_t8602")
+
+[node name="KartOobi" type="MeshInstance3D" parent="." unique_id=398421548]
+mesh = ExtResource("1_52rcn")

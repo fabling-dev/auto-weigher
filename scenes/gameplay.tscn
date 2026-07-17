@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cw4lmdyxdjics"]
+
+[ext_resource type="Script" uid="uid://cmtlhuk7twy7u" path="res://scripts/cartween.gd" id="1_00tan"]
+[ext_resource type="Script" uid="uid://2gsrgy548nru" path="res://scripts/carloader.gd" id="1_7biu0"]
+[ext_resource type="Script" uid="uid://bhqi5ytiaa5rv" path="res://scripts/skymove.gd" id="1_ocj2s"]
+[ext_resource type="PackedScene" uid="uid://ckj2fl3nupgj2" path="res://scenes/world.tscn" id="3_l1v76"]
+[ext_resource type="PackedScene" uid="uid://20f587kmg4q4" path="res://scenes/sky.tscn" id="5_ocj2s"]
+[ext_resource type="PackedScene" uid="uid://o7rq8nch8svj" path="res://scenes/UI.tscn" id="6_din8e"]
+
+[node name="GAME" type="Node2D" unique_id=1354895136]
+
+[node name="sky" type="SubViewportContainer" parent="." unique_id=2116162625]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="SubViewport" type="SubViewport" parent="sky" unique_id=264328007]
+own_world_3d = true
+handle_input_locally = false
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+script = ExtResource("1_ocj2s")
+
+[node name="Camera3D" type="Camera3D" parent="sky/SubViewport" unique_id=1937116024]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.115, 0, 0)
+
+[node name="SKY" parent="sky/SubViewport" unique_id=222311777 instance=ExtResource("5_ocj2s")]
+
+[node name="carcontainer" type="SubViewportContainer" parent="." unique_id=1410224869]
+offset_right = 446.0
+offset_bottom = 296.0
+script = ExtResource("1_00tan")
+
+[node name="SubViewport" type="SubViewport" parent="carcontainer" unique_id=857976728]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(446, 296)
+render_target_update_mode = 4
+script = ExtResource("1_7biu0")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="carcontainer/SubViewport" unique_id=1386197270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.414429, 0.6137085, 0)
+light_energy = 16.0
+light_indirect_energy = 13.062
+light_volumetric_fog_energy = 1.66
+light_size = 0.62
+omni_range = 33.871548
+
+[node name="Camera3D" type="Camera3D" parent="carcontainer/SubViewport" unique_id=1994129280]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5, 0.975, 0)
+keep_aspect = 0
+projection = 1
+fov = 120.0
+size = 3.803
+
+[node name="Timer" type="Timer" parent="carcontainer/SubViewport" unique_id=2053691787]
+autostart = true
+
+[node name="worldcontainer" type="SubViewportContainer" parent="." unique_id=1558600199]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="SubViewport" type="SubViewport" parent="worldcontainer" unique_id=1739999444]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="Camera3D2" type="Camera3D" parent="worldcontainer/SubViewport" unique_id=212831135]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.496143, 0.975, -8.084921e-07)
+keep_aspect = 0
+projection = 1
+fov = 120.0
+size = 13.253
+
+[node name="Node3D" parent="worldcontainer/SubViewport" unique_id=551580617 instance=ExtResource("3_l1v76")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1711307708]
+visible = false
+position = Vector2(640, 360)
+
+[node name="Control" parent="." unique_id=330260513 instance=ExtResource("6_din8e")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1280.0
+offset_bottom = 719.0
+grow_horizontal = 1
+grow_vertical = 1

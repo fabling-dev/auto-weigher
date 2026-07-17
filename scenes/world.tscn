@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://ckj2fl3nupgj2"]
+
+[ext_resource type="PackedScene" uid="uid://tilwxmwm3fy6" path="res://assets/environment/supports.fbx" id="1_nnsk1"]
+[ext_resource type="PackedScene" uid="uid://06h32l0k251a" path="res://assets/environment/track-road-wide.fbx" id="2_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://ck7op35w347xn" path="res://assets/GRASS/open.fbx" id="3_4wyf3"]
+
+[node name="Node3D" type="Node3D" unique_id=551580617]
+
+[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=733443089]
+transform = Transform3D(1.8636379e-06, 0, 1, 0, 1, 0, -1, 0, 1.8636379e-06, 14.897022, 6.570764, 0.6655326)
+area_range = 23.329
+area_attenuation = -0.296
+
+[node name="supports" parent="." unique_id=993307145 instance=ExtResource("1_nnsk1")]
+transform = Transform3D(2.855, 0, 0, 0, 0.485, 0, 0, 0, 6.195, 0, -1.1186366, 0)
+
+[node name="track-road-wide" parent="." unique_id=24171828 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1173859, 0)
+
+[node name="track-road-wide2" parent="." unique_id=461359072 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1175892, -1)
+
+[node name="track-road-wide3" parent="." unique_id=274302798 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1175892, -2)
+
+[node name="track-road-wide4" parent="." unique_id=1755845584 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1175892, 2)
+
+[node name="track-road-wide5" parent="." unique_id=1020383290 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1175892, -3)
+
+[node name="track-road-wide6" parent="." unique_id=627289806 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1175892, 3)
+
+[node name="track-road-wide7" parent="." unique_id=1114307524 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1175892, -4)
+
+[node name="track-road-wide8" parent="." unique_id=1503649469 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1175892, 4)
+
+[node name="track-road-wide9" parent="." unique_id=1354947549 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.118, -5)
+
+[node name="track-road-wide10" parent="." unique_id=2088979230 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.118, 5)
+
+[node name="track-road-wide11" parent="." unique_id=59734586 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.118, -6)
+
+[node name="track-road-wide12" parent="." unique_id=271229712 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.118, 6)
+
+[node name="track-road-wide13" parent="." unique_id=1308375715 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.118, -7)
+
+[node name="track-road-wide14" parent="." unique_id=1596617043 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.118, 7)
+
+[node name="track-road-wide15" parent="." unique_id=595070334 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.118, -8)
+
+[node name="track-road-wide16" parent="." unique_id=491237698 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.118, 8)
+
+[node name="track-road-wide17" parent="." unique_id=13279520 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.118, -9)
+
+[node name="track-road-wide18" parent="." unique_id=13636711 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.118, 9)
+
+[node name="track-road-wide19" parent="." unique_id=796107890 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.118, -10)
+
+[node name="track-road-wide20" parent="." unique_id=1890467367 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.118, 10)
+
+[node name="track-road-wide21" parent="." unique_id=1219459070 instance=ExtResource("2_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.118, 1)
+
+[node name="open" parent="." unique_id=1592716899 instance=ExtResource("3_4wyf3")]
+transform = Transform3D(19.463406, 0.25881904, 0, -5.215204, 0.9659258, 0, 0, 0, 26.945, 9.881944, -3.7100747, 0)

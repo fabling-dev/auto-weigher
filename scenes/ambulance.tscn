@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dub4v6l8ut7gh"]
+
+[ext_resource type="ArrayMesh" uid="uid://c5ufahmlqjty7" path="res://assets/cars/ambulance.fbx" id="1_rl6hy"]
+[ext_resource type="Script" uid="uid://bctv0ucygikqv" path="res://scripts/Ambulance.gd" id="1_u15fs"]
+
+[node name="ambulance" type="Node3D" unique_id=353291972]
+script = ExtResource("1_u15fs")
+
+[node name="Ambulance" type="MeshInstance3D" parent="." unique_id=153576963]
+mesh = ExtResource("1_rl6hy")

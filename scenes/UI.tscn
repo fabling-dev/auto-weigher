@@ -1,0 +1,228 @@
+[gd_scene format=3 uid="uid://o7rq8nch8svj"]
+
+[ext_resource type="Script" uid="uid://beh5hgrc6r4sd" path="res://scripts/GUI.gd" id="1_dj8aq"]
+[ext_resource type="Texture2D" uid="uid://dc50bexthwvr0" path="res://aseprite_assets/edited_icons/checkmark_wide.png" id="2_ro3t7"]
+[ext_resource type="Texture2D" uid="uid://b8konp65av4bo" path="res://aseprite_assets/icons/arrowDown.png" id="3_5en4g"]
+
+[sub_resource type="Gradient" id="Gradient_dj8aq"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ro3t7"]
+gradient = SubResource("Gradient_dj8aq")
+width = 36
+height = 10
+
+[sub_resource type="Gradient" id="Gradient_ua6yw"]
+colors = PackedColorArray(0.43633327, 0.77, 0, 1, 0.43633327, 0.77, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5en4g"]
+gradient = SubResource("Gradient_ua6yw")
+width = 36
+height = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dj8aq"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ro3t7"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5en4g"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="Gradient" id="Gradient_ro3t7"]
+colors = PackedColorArray(0.733002, 2.7554854e-06, 6.738305e-07, 1, 0.733002, 2.7554854e-06, 6.738305e-07, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_75u2n"]
+gradient = SubResource("Gradient_ro3t7")
+width = 36
+height = 4
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xpksx"]
+gradient = SubResource("Gradient_ro3t7")
+width = 36
+height = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wlde"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpksx"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24e4x"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75u2n"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.6, 0.14400001, 0.14400001, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ua6yw"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.36078432, 0.8862745, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Control" type="Control" unique_id=330260513]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_dj8aq")
+
+[node name="VSlider" type="VSlider" parent="." unique_id=1579304399]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.957
+offset_left = 1184.0
+offset_top = 238.0
+offset_right = -60.0
+offset_bottom = -51.04004
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(40, 200)
+theme_override_icons/grabber = SubResource("GradientTexture2D_ro3t7")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_5en4g")
+theme_override_styles/slider = SubResource("StyleBoxFlat_dj8aq")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_ro3t7")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_5en4g")
+max_value = 250.0
+value = 125.0
+
+[node name="VSlider2" type="VSlider" parent="." unique_id=543668605]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.957
+offset_left = 1184.0
+offset_top = 238.0
+offset_right = -60.0
+offset_bottom = -51.04004
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(40, 200)
+mouse_filter = 2
+theme_override_icons/grabber = SubResource("GradientTexture2D_75u2n")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_xpksx")
+theme_override_styles/slider = SubResource("StyleBoxFlat_3wlde")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_xpksx")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_24e4x")
+max_value = 250.0
+value = 125.0
+scrollable = false
+
+[node name="Button" type="Button" parent="." unique_id=1507891089]
+custom_maximum_size = Vector2(220, 110)
+propagate_maximum_size = true
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 975.0
+offset_top = 384.0
+offset_right = -85.0
+offset_bottom = -226.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxFlat_75u2n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ua6yw")
+action_mode = 0
+icon = ExtResource("2_ro3t7")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="." unique_id=1622542405]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 783.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -521.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="HFlowContainer" unique_id=1166173552]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("3_5en4g")
+expand_mode = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
