@@ -6,12 +6,15 @@ extends Control
 
 const max_score : int = 50
 
-func _process(_delta: float) -> void:
+func _ready() -> void:
 	GM.carwentboom.connect(restartbutton)
+
+func _process(_delta: float) -> void:
+	pass
 
 func _on_button_pressed() -> void:
 	var difference = int(abs(weight_guess.value - GM.carweight))
-	GM.score += max(0, max_score - difference)
+	GM.update_score(max(0, max_score - difference))
 	GM.guesssubmitted.emit()
 	submit_guess.disabled = true
 	answer.value = GM.carweight

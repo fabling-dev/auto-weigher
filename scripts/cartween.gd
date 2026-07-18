@@ -8,7 +8,7 @@ var dir : int = -1
 
 const stoplocation : float = 420
 const spawnlocation : Vector2 = Vector2(1300, 300)
-const SPEED : float = 400.0
+const SPEED : float = 800.0
 
 func _ready() -> void:
 	position = spawnlocation
