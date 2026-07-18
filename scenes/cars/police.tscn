@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c7l5fmydue65"]
+
+[ext_resource type="ArrayMesh" uid="uid://d3byvtpn72pqg" path="res://assets/cars/police.fbx" id="1_jre7e"]
+[ext_resource type="Script" uid="uid://dtn7u4a05qoha" path="res://scripts/cars/police.gd" id="1_wiel2"]
+
+[node name="police" type="Node3D" unique_id=821208610]
+script = ExtResource("1_wiel2")
+
+[node name="KartOobi" type="MeshInstance3D" parent="." unique_id=1179623940]
+mesh = ExtResource("1_jre7e")

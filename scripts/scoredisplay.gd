@@ -45,7 +45,6 @@ func delete_t2() -> void:
 func add_t1() -> void:
 	t1_wrench = t1_wrench_scene.instantiate()
 	add_child(t1_wrench)
-	print(self.get_children())
 	GM.t1_count += 1
 	move_child(t1_wrench, 0)
 

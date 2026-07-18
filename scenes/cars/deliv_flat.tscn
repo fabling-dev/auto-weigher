@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://7bypjatkgs47"]
+
+[ext_resource type="Script" uid="uid://chnycjr5hgjst" path="res://scripts/cars/deliv_flat.gd" id="1_jxccv"]
+[ext_resource type="ArrayMesh" uid="uid://bx6t8a37o512r" path="res://assets/cars/delivery-flat.fbx" id="1_ooydy"]
+
+[node name="deliv_flat" type="Node3D" unique_id=13251508]
+script = ExtResource("1_jxccv")
+
+[node name="KartOobi" type="MeshInstance3D" parent="." unique_id=398421548]
+mesh = ExtResource("1_ooydy")

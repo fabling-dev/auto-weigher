@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dmly1y1l6iea3"]
+
+[ext_resource type="Script" uid="uid://op4hr2r15dvd" path="res://scripts/cars/sportssedan.gd" id="1_tkpij"]
+[ext_resource type="ArrayMesh" uid="uid://bi1m6xg3svuwp" path="res://assets/cars/sedan-sports.fbx" id="1_ux6vg"]
+
+[node name="sportssedan" type="Node3D" unique_id=1992056870]
+script = ExtResource("1_tkpij")
+
+[node name="KartOobi" type="MeshInstance3D" parent="." unique_id=1372733269]
+mesh = ExtResource("1_ux6vg")

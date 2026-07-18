@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dub4v6l8ut7gh"]
 
 [ext_resource type="ArrayMesh" uid="uid://c5ufahmlqjty7" path="res://assets/cars/ambulance.fbx" id="1_rl6hy"]
-[ext_resource type="Script" uid="uid://bctv0ucygikqv" path="res://scripts/Ambulance.gd" id="1_u15fs"]
+[ext_resource type="Script" uid="uid://bctv0ucygikqv" path="res://scripts/cars/Ambulance.gd" id="1_u15fs"]
 
 [node name="ambulance" type="Node3D" unique_id=353291972]
 script = ExtResource("1_u15fs")

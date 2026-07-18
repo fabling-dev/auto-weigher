@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://o6744ahpqx7o"]
+
+[ext_resource type="Script" uid="uid://ccsbfvmef3jj1" path="res://scripts/cars/firetruck.gd" id="1_1qa0c"]
+[ext_resource type="ArrayMesh" uid="uid://o1e0458v32u5" path="res://assets/cars/firetruck.fbx" id="1_88yud"]
+
+[node name="firetruck" type="Node3D" unique_id=1615981204]
+script = ExtResource("1_1qa0c")
+
+[node name="KartOobi" type="MeshInstance3D" parent="." unique_id=743856361]
+mesh = ExtResource("1_88yud")

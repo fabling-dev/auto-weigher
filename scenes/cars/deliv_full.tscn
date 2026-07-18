@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d2il4k0f82unu"]
+
+[ext_resource type="ArrayMesh" uid="uid://dhgxppo5ttyo0" path="res://assets/cars/delivery.fbx" id="1_mcqpw"]
+[ext_resource type="Script" uid="uid://bca1wtag2ylxx" path="res://scripts/cars/deliv_full.gd" id="1_vepe7"]
+
+[node name="deliv_full" type="Node3D" unique_id=1577337864]
+script = ExtResource("1_vepe7")
+
+[node name="KartOobi" type="MeshInstance3D" parent="." unique_id=424093124]
+mesh = ExtResource("1_mcqpw")

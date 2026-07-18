@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dyjddmmsydxpm"]
+
+[ext_resource type="Script" uid="uid://oyxsm36rkd21" path="res://scripts/cars/formula2.gd" id="1_1h0p2"]
+[ext_resource type="ArrayMesh" uid="uid://gimx1qnh51yw" path="res://assets/cars/race-future.fbx" id="1_k32am"]
+
+[node name="formula2" type="Node3D" unique_id=1445874232]
+script = ExtResource("1_1h0p2")
+
+[node name="KartOobi" type="MeshInstance3D" parent="." unique_id=1637210357]
+mesh = ExtResource("1_k32am")

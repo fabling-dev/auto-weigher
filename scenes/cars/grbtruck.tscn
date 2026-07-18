@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://baymn8a1jfau1"]
+
+[ext_resource type="ArrayMesh" uid="uid://1t4obyqaa2jd" path="res://assets/cars/garbage-truck.fbx" id="1_bni6j"]
+[ext_resource type="Script" uid="uid://5nd45uekol8w" path="res://scripts/cars/grbtruck.gd" id="1_uma31"]
+
+[node name="grbtruck" type="Node3D" unique_id=1233725431]
+script = ExtResource("1_uma31")
+
+[node name="KartOobi" type="MeshInstance3D" parent="." unique_id=738741613]
+mesh = ExtResource("1_bni6j")

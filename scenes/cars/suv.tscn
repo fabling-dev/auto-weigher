@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b7twei7gdxn57"]
+
+[ext_resource type="ArrayMesh" uid="uid://bc2lski083a5p" path="res://assets/cars/suv.fbx" id="1_jnbeg"]
+[ext_resource type="Script" uid="uid://c7u7krcd1wc83" path="res://scripts/cars/suv.gd" id="1_shmfh"]
+
+[node name="SUV" type="Node3D" unique_id=1870103875]
+script = ExtResource("1_shmfh")
+
+[node name="KartOobi" type="MeshInstance3D" parent="." unique_id=470025946]
+mesh = ExtResource("1_jnbeg")

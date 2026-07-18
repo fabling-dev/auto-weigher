@@ -19,7 +19,6 @@ func _on_button_pressed() -> void:
 	submit_guess.disabled = true
 	answer.value = GM.carweight
 	answer.visible = true
-	print(GM.score)
 
 func restartbutton():
 	submit_guess.disabled = false

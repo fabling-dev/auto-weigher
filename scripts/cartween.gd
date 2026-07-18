@@ -8,7 +8,7 @@ var dir : int = -1
 
 const stoplocation : float = 420
 const spawnlocation : Vector2 = Vector2(1300, 300)
-const SPEED : float = 800.0
+var SPEED : float = 450.0
 
 func _ready() -> void:
 	position = spawnlocation
@@ -20,6 +20,7 @@ func _physics_process(delta: float) -> void:
 
 	if position.x < -300:
 		despawn()
+		SPEED = 450.0
 
 func despawn() -> void:
 	car = subview.get_child(-1)
@@ -32,6 +33,7 @@ func despawn() -> void:
 
 func submission() -> void:
 	weightaccpeted = true
+	SPEED = 700.0
 
 
 		

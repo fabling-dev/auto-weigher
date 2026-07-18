@@ -4,10 +4,10 @@ extends HBoxContainer
 @onready var fillbox = preload("res://shaders/timer.tres")
 @onready var timerlaber: Label = $timer
 
-@export var duration : float = 30
+@export var duration : float = 20
 
 func _ready() -> void:
-	timedownbar.max_value = 10
+	timedownbar.max_value = 6.0
 	GM.timer = duration
 	fillbox.bg_color = convertcolor(122,209,105,255)
 
@@ -17,9 +17,9 @@ func _process(delta: float) -> void:
 		timedownbar.value = GM.timer
 		timerlaber.text = str(snapped(GM.timer, 0.1))
 
-	if 10 <= GM.timer and GM.timer < 25:
+	if 6 <= GM.timer and GM.timer < 15:
 		fillbox.bg_color = convertcolor(219, 207, 72,255)
-	elif GM.timer < 10:
+	elif GM.timer < 6:
 		fillbox.bg_color = convertcolor(207, 50, 50,255)
 	else:
 		fillbox.bg_color = convertcolor(122,209,105,255)
