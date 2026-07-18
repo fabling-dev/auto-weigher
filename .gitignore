@@ -9,4 +9,4 @@ notes.txt
 /temp_assets/
 
 #zipfiles
-.zip/
+*.zip/
