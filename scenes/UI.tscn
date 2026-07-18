@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://o7rq8nch8svj"]
 
 [ext_resource type="Script" uid="uid://beh5hgrc6r4sd" path="res://scripts/GUI.gd" id="1_dj8aq"]
-[ext_resource type="Texture2D" uid="uid://dc50bexthwvr0" path="res://aseprite_assets/edited_icons/checkmark_wide.png" id="2_ro3t7"]
+[ext_resource type="Texture2D" uid="uid://dc50bexthwvr0" path="res://assets/icons/checkmark_wide.png" id="2_ro3t7"]
 [ext_resource type="Script" uid="uid://xskof86eq0qs" path="res://scripts/scoredisplay.gd" id="3_5en4g"]
+[ext_resource type="Script" uid="uid://clgmqya13gw6r" path="res://scripts/timercountdown.gd" id="4_ua6yw"]
+[ext_resource type="StyleBox" uid="uid://cpigvl73oi56d" path="res://shaders/timer.tres" id="5_75u2n"]
+[ext_resource type="Texture2D" uid="uid://bna48v703icn8" path="res://assets/icons/anvil.png" id="6_3wlde"]
 
 [sub_resource type="Gradient" id="Gradient_dj8aq"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -205,7 +208,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ua6yw")
 action_mode = 0
 icon = ExtResource("2_ro3t7")
 
-[node name="HFlowContainer" type="HFlowContainer" parent="." unique_id=1622542405]
+[node name="scorecontainer" type="HFlowContainer" parent="." unique_id=1622542405]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -221,5 +224,43 @@ theme_override_constants/v_separation = 0
 alignment = 2
 last_wrap_alignment = 3
 script = ExtResource("3_5en4g")
+
+[node name="TIMEDOWN" type="HBoxContainer" parent="." unique_id=104144763]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 53.0
+offset_top = 74.0
+offset_right = -644.0
+offset_bottom = -608.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_ua6yw")
+
+[node name="timedownbar" type="ProgressBar" parent="TIMEDOWN" unique_id=708624638]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/fill = ExtResource("5_75u2n")
+max_value = 10.0
+value = 10.0
+allow_greater = true
+show_percentage = false
+
+[node name="timer" type="Label" parent="TIMEDOWN" unique_id=705518129]
+layout_mode = 2
+text = "0"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1736242435]
+custom_minimum_size = Vector2(28, 28)
+custom_maximum_size = Vector2(28, 28)
+layout_mode = 0
+offset_left = 1188.0
+offset_top = 206.0
+offset_right = 1216.0
+offset_bottom = 234.0
+texture = ExtResource("6_3wlde")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

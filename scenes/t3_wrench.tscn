@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bc2ms6arf81gj"]
 
-[ext_resource type="Texture2D" uid="uid://ddqgaugsqo77t" path="res://aseprite_assets/icons/wrench.png" id="1_02usf"]
+[ext_resource type="Texture2D" uid="uid://ddqgaugsqo77t" path="res://temp_assets/iconsbackup/wrench.png" id="1_02usf"]
 [ext_resource type="Script" uid="uid://ba1s3ua67oh8k" path="res://scripts/t3_wrench.gd" id="2_q1r2h"]
 
 [sub_resource type="Gradient" id="Gradient_rs6ab"]

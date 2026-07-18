@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ckj2fl3nupgj2"]
 
-[ext_resource type="PackedScene" uid="uid://tilwxmwm3fy6" path="res://assets/environment/supports.fbx" id="1_nnsk1"]
-[ext_resource type="PackedScene" uid="uid://06h32l0k251a" path="res://assets/environment/track-road-wide.fbx" id="2_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://tqowksg0xhy4" path="res://assets/environment/supports.fbx" id="1_nnsk1"]
+[ext_resource type="PackedScene" uid="uid://10ht4mtx07dc" path="res://assets/environment/track-road-wide.fbx" id="2_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://ck7op35w347xn" path="res://assets/GRASS/open.fbx" id="3_4wyf3"]
 
 [node name="Node3D" type="Node3D" unique_id=551580617]
