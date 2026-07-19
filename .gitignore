@@ -14,3 +14,6 @@ notes.txt
 
 # Dev folder
 /dev/
+
+#cfg
+*.cfg
