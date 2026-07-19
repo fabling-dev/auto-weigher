@@ -10,3 +10,7 @@ notes.txt
 
 #zipfiles
 /*.zip/
+*.zip
+
+# Dev folder
+/dev/

@@ -28,7 +28,6 @@ func _on_button_pressed() -> void:
 	selectionmade.play()
 	var difference = int(abs(weight_guess.value - GM.carweight))
 	GM.update_score(max(0, max_score - difference))
-	print(max(0, max_score - difference))
 	showscorepop(max(0, max_score - difference))
 	GM.guesssubmitted.emit()
 	submit_guess.disabled = true

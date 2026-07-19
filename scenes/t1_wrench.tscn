@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b0a5as1dwtfxu"]
 
-[ext_resource type="Texture2D" uid="uid://ddqgaugsqo77t" path="res://temp_assets/iconsbackup/wrench.png" id="1_jksff"]
 [ext_resource type="Script" uid="uid://bjnhcseslv0e5" path="res://scripts/t1_wrench.gd" id="2_rs6ab"]
+[ext_resource type="Texture2D" uid="uid://cbuauv8hvqur7" path="res://assets/icons/wrench.png" id="2_tb5gr"]
 
 [sub_resource type="Gradient" id="Gradient_rs6ab"]
 colors = PackedColorArray(0, 0, 0, 0.54901963, 0, 0, 0, 0.54901963)
@@ -28,7 +28,7 @@ anchor_right = 0.023000002
 anchor_bottom = 0.042000003
 offset_right = 10.559998
 offset_bottom = 9.759998
-texture = ExtResource("1_jksff")
+texture = ExtResource("2_tb5gr")
 expand_mode = 1
 
 [node name="ColorRect" type="ColorRect" parent="TextureRect" unique_id=1802775855]

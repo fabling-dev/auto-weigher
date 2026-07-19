@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://drl7ahm44dllv" path="res://assets/icons/mehpoints.png" id="18_s2vcx"]
 [ext_resource type="Texture2D" uid="uid://b1v2eywqt1ly" path="res://assets/icons/nopoints.png" id="19_38m54"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24e4x"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hu0pd"]
 texture = ExtResource("2_xpksx")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
@@ -150,7 +150,7 @@ texture_region_size = Vector2i(18, 18)
 15:3/0 = 0
 15:4/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ukj8e"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5ifv"]
 texture = ExtResource("3_24e4x")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
@@ -256,8 +256,8 @@ texture_region_size = Vector2i(18, 18)
 
 [sub_resource type="TileSet" id="TileSet_vl80j"]
 tile_size = Vector2i(18, 18)
-sources/0 = SubResource("TileSetAtlasSource_24e4x")
-sources/1 = SubResource("TileSetAtlasSource_ukj8e")
+sources/0 = SubResource("TileSetAtlasSource_hu0pd")
+sources/1 = SubResource("TileSetAtlasSource_o5ifv")
 
 [sub_resource type="Gradient" id="Gradient_dj8aq"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)

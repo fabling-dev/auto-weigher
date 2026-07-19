@@ -87,7 +87,10 @@ func update_score(points: int) -> void:
 
 
 func timerupdate(scored : int) -> void:
-	timer += scored/(4.0 *difficulty[diff_value])
+	timer += (scored/(4.0 *difficulty[diff_value])) - (5/(4.0 *difficulty[diff_value]))
+	if timer >= 40/(difficulty[diff_value]):
+		timer = 40/(difficulty[diff_value])
+	print(timer)
 
 func speedup(scoresum : int) -> float:
 	if scoresum%2 == 0 and scoresum > 0:
