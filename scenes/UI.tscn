@@ -8,6 +8,17 @@
 [ext_resource type="Script" uid="uid://clgmqya13gw6r" path="res://scripts/timercountdown.gd" id="4_ua6yw"]
 [ext_resource type="StyleBox" uid="uid://cpigvl73oi56d" path="res://shaders/timer.tres" id="5_75u2n"]
 [ext_resource type="Texture2D" uid="uid://bna48v703icn8" path="res://assets/icons/anvil.png" id="6_3wlde"]
+[ext_resource type="Texture2D" uid="uid://b2bx8ov5ioym8" path="res://assets/icons/home.png" id="9_ukj8e"]
+[ext_resource type="AudioStream" uid="uid://djtnnusu4fert" path="res://assets/sounds/bass.ogg" id="10_7paak"]
+[ext_resource type="AudioStream" uid="uid://btkfqyvjmk3k3" path="res://assets/sounds/main_drums.ogg" id="11_5sqrc"]
+[ext_resource type="AudioStream" uid="uid://datcbggits1oe" path="res://assets/sounds/instrumental.ogg" id="12_ilk7v"]
+[ext_resource type="AudioStream" uid="uid://dtx2ovxbprxy8" path="res://assets/sounds/carhorn_button.ogg" id="13_5sqrc"]
+[ext_resource type="AudioStream" uid="uid://dje2878ot8xsd" path="res://assets/sounds/buttonpress_final.ogg" id="14_ilk7v"]
+[ext_resource type="Texture2D" uid="uid://21hlqvevp2q6" path="res://assets/icons/PERFECT.png" id="15_flkkw"]
+[ext_resource type="Texture2D" uid="uid://bo0e54ubbbqhi" path="res://assets/icons/greatpoints.png" id="16_hu0pd"]
+[ext_resource type="Texture2D" uid="uid://cueloa0xn4p3c" path="res://assets/icons/OK.png" id="17_o5ifv"]
+[ext_resource type="Texture2D" uid="uid://drl7ahm44dllv" path="res://assets/icons/mehpoints.png" id="18_s2vcx"]
+[ext_resource type="Texture2D" uid="uid://b1v2eywqt1ly" path="res://assets/icons/nopoints.png" id="19_38m54"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24e4x"]
 texture = ExtResource("2_xpksx")
@@ -375,6 +386,33 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w7enk"]
+bg_color = Color(0.8409665, 0.3566236, 0.2422592, 1)
+skew = Vector2(0.5, 0)
+corner_radius_top_left = 30
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aputy"]
+bg_color = Color(0.61, 0.120576695, 0.10370001, 1)
+skew = Vector2(0.5, 0)
+corner_radius_top_left = 30
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7paak"]
+bg_color = Color(0.96, 0.16192, 0.13439998, 1)
+skew = Vector2(0.5, 0)
+corner_radius_top_left = 30
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+
 [node name="Control" type="Control" unique_id=330260513]
 layout_mode = 3
 anchors_preset = 15
@@ -416,9 +454,9 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.957
-offset_left = 1184.0
+offset_left = 1186.0
 offset_top = 238.0
-offset_right = -60.0
+offset_right = -58.0
 offset_bottom = -51.04004
 grow_horizontal = 2
 grow_vertical = 2
@@ -494,6 +532,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("4_ua6yw")
 
+[node name="bass" type="AudioStreamPlayer2D" parent="TIMEDOWN" unique_id=1521378000]
+position = Vector2(-45, -57)
+stream = ExtResource("10_7paak")
+
+[node name="drums" type="AudioStreamPlayer2D" parent="TIMEDOWN" unique_id=94236910]
+position = Vector2(-45, -57)
+stream = ExtResource("11_5sqrc")
+
+[node name="instrumental" type="AudioStreamPlayer2D" parent="TIMEDOWN" unique_id=2086037515]
+position = Vector2(-45, -57)
+stream = ExtResource("12_ilk7v")
+volume_db = 7.89
+
 [node name="timedownbar" type="ProgressBar" parent="TIMEDOWN" unique_id=708624638]
 unique_name_in_owner = true
 layout_mode = 2
@@ -517,7 +568,97 @@ tile_set = SubResource("TileSet_vl80j")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1595560983]
 position = Vector2(1186, 191)
-tile_map_data = PackedByteArray("AADA//j/AAAMAAQAAADA//n/AAALAAMAAADB//j/AAAMAAYAAADC//j/AAANAAYAAADD//j/AAANAAYAAADE//j/AAANAAYAAADF//j/AAANAAYAAADG//j/AAANAAYAAADH//j/AAANAAYAAADI//j/AAANAAYAAADJ//j/AAANAAYAAADK//j/AAANAAYAAADL//j/AAANAAYAAADM//j/AAANAAYAAADN//j/AAANAAYAAADO//j/AAANAAYAAADP//j/AAANAAYAAADQ//j/AAANAAYAAADR//j/AAANAAYAAADS//j/AAANAAYAAADT//j/AAANAAYAAADU//j/AAANAAYAAADV//j/AAANAAYAAADW//j/AAANAAYAAADX//j/AAANAAYAAADY//j/AAANAAYAAADZ//j/AAANAAYAAADa//j/AAANAAYAAADb//j/AAANAAYAAADc//j/AAANAAYAAADd//j/AAANAAYAAADA//v/AAAMAAUAAADA//r/AAALAAYAAADB//v/AAAMAAYAAADC//v/AAANAAYAAADD//v/AAANAAYAAADE//v/AAANAAYAAADF//v/AAANAAYAAADG//v/AAANAAYAAADH//v/AAANAAYAAADI//v/AAANAAYAAADJ//v/AAANAAYAAADK//v/AAANAAYAAADL//v/AAANAAYAAADM//v/AAANAAYAAADN//v/AAANAAYAAADO//v/AAANAAYAAADP//v/AAANAAYAAADQ//v/AAANAAYAAADR//v/AAANAAYAAADS//v/AAANAAYAAADT//v/AAANAAYAAADU//v/AAANAAYAAADV//v/AAANAAYAAADW//v/AAANAAYAAADX//v/AAANAAYAAADY//v/AAANAAYAAADZ//v/AAANAAYAAADa//v/AAANAAYAAADb//v/AAANAAYAAADc//v/AAANAAYAAADd//v/AAANAAYAAADg//j/AAAPAAYAAADg//v/AAAPAAYAAADh//j/AAANAAQAAADh//n/AAALAAMAAADh//r/AAALAAYAAADh//v/AAANAAUAAADe//v/AAANAAYAAADf//v/AAANAAYAAADe//j/AAANAAYAAADf//j/AAANAAYAAAD//wAAAAAMAAQAAAD//wEAAAALAAQAAAD//wIAAAALAAQAAAD//wMAAAALAAQAAAD//wQAAAALAAQAAAD//wUAAAALAAQAAAD//wYAAAALAAQAAAD//wcAAAALAAQAAAD//wgAAAALAAQAAAD//wkAAAALAAQAAAD//woAAAALAAQAAAD//wsAAAALAAUAAAD//wwAAAALAAQAAAD//w0AAAALAAQAAAD//w4AAAALAAQAAAD//w8AAAALAAUAAAD//xAAAAALAAQAAAD//xEAAAALAAQAAAD//xIAAAALAAQAAAD//xMAAAALAAQAAAD//xQAAAALAAQAAAD//xUAAAALAAQAAAD//xYAAAALAAQAAAD//xcAAAALAAQAAAD//xgAAAALAAQAAAD//xkAAAAMAAUAAAACAAAAAAANAAQAAAACAAEAAAALAAQAAAACAAIAAAALAAQAAAACAAMAAAALAAQAAAACAAQAAAALAAQAAAACAAUAAAALAAQAAAACAAYAAAALAAQAAAACAAcAAAALAAQAAAACAAgAAAALAAQAAAACAAkAAAALAAQAAAACAAoAAAALAAQAAAACAAsAAAALAAQAAAACAAwAAAALAAQAAAACAA0AAAALAAQAAAACAA4AAAALAAQAAAACAA8AAAALAAQAAAACABAAAAALAAQAAAACABEAAAALAAQAAAACABIAAAALAAQAAAACABMAAAALAAQAAAACABQAAAALAAQAAAACABUAAAALAAQAAAACABYAAAALAAQAAAACABcAAAALAAQAAAACABgAAAALAAQAAAACABkAAAANAAUAAAD3/wsAAAAMAAQAAAD3/wwAAAALAAQAAAD3/w0AAAALAAQAAAD3/w4AAAALAAQAAAD3/w8AAAAMAAUAAAD4/w8AAAANAAYAAAD5/w8AAAANAAYAAAD6/w8AAAANAAYAAAD7/w8AAAANAAYAAAD8/w8AAAANAAYAAAD9/w8AAAANAAYAAAD+/w8AAAANAAYAAAD4/wsAAAANAAYAAAD5/wsAAAANAAYAAAD6/wsAAAANAAYAAAD7/wsAAAANAAYAAAD8/wsAAAANAAYAAAD9/wsAAAANAAYAAAD+/wsAAAANAAYAAAAAAAAAAAANAAYAAAABAAAAAAANAAYAAAAAABkAAAANAAYAAAABABkAAAANAAYAAAA=")
+tile_map_data = PackedByteArray("AADA//j/AAAMAAQAAADA//n/AAALAAMAAADB//j/AAAMAAYAAADC//j/AAANAAYAAADD//j/AAANAAYAAADE//j/AAANAAYAAADF//j/AAANAAYAAADG//j/AAANAAYAAADH//j/AAANAAYAAADI//j/AAANAAYAAADJ//j/AAANAAYAAADK//j/AAANAAYAAADL//j/AAANAAYAAADM//j/AAANAAYAAADN//j/AAANAAYAAADO//j/AAANAAYAAADP//j/AAANAAYAAADQ//j/AAANAAYAAADR//j/AAANAAYAAADS//j/AAANAAYAAADT//j/AAANAAYAAADU//j/AAANAAYAAADV//j/AAANAAYAAADW//j/AAANAAYAAADX//j/AAANAAYAAADY//j/AAANAAYAAADZ//j/AAANAAYAAADa//j/AAANAAYAAADb//j/AAANAAYAAADc//j/AAANAAYAAADd//j/AAANAAYAAADA//v/AAAMAAUAAADA//r/AAALAAYAAADB//v/AAAMAAYAAADC//v/AAANAAYAAADD//v/AAANAAYAAADE//v/AAANAAYAAADF//v/AAANAAYAAADG//v/AAANAAYAAADH//v/AAANAAYAAADI//v/AAANAAYAAADJ//v/AAANAAYAAADK//v/AAANAAYAAADL//v/AAANAAYAAADM//v/AAANAAYAAADN//v/AAANAAYAAADO//v/AAANAAYAAADP//v/AAANAAYAAADQ//v/AAANAAYAAADR//v/AAANAAYAAADS//v/AAANAAYAAADT//v/AAANAAYAAADU//v/AAANAAYAAADV//v/AAANAAYAAADW//v/AAANAAYAAADX//v/AAANAAYAAADY//v/AAANAAYAAADZ//v/AAANAAYAAADa//v/AAANAAYAAADb//v/AAANAAYAAADc//v/AAANAAYAAADd//v/AAANAAYAAADg//j/AAAPAAYAAADg//v/AAAPAAYAAADh//j/AAANAAQAAADh//n/AAALAAMAAADh//r/AAALAAYAAADh//v/AAANAAUAAADe//v/AAANAAYAAADf//v/AAANAAYAAADe//j/AAANAAYAAADf//j/AAANAAYAAAD//wAAAAAMAAQAAAD//wEAAAALAAMAAAD//wIAAAALAAQAAAD//wMAAAALAAQAAAD//wQAAAALAAQAAAD//wUAAAALAAQAAAD//wYAAAALAAQAAAD//wcAAAALAAQAAAD//wgAAAALAAQAAAD//wkAAAALAAQAAAD//woAAAALAAQAAAD//wsAAAALAAUAAAD//wwAAAALAAQAAAD//w0AAAALAAQAAAD//w4AAAALAAQAAAD//w8AAAALAAUAAAD//xAAAAALAAQAAAD//xEAAAALAAQAAAD//xIAAAALAAQAAAD//xMAAAALAAQAAAD//xQAAAALAAQAAAD//xUAAAALAAQAAAD//xYAAAALAAQAAAD//xcAAAALAAQAAAD//xgAAAALAAYAAAD//xkAAAAMAAUAAAACAAAAAAANAAQAAAACAAEAAAALAAMAAAACAAIAAAALAAQAAAACAAMAAAALAAQAAAACAAQAAAALAAQAAAACAAUAAAALAAQAAAACAAYAAAALAAQAAAACAAcAAAALAAQAAAACAAgAAAALAAQAAAACAAkAAAALAAQAAAACAAoAAAALAAQAAAACAAsAAAALAAQAAAACAAwAAAALAAQAAAACAA0AAAALAAQAAAACAA4AAAALAAQAAAACAA8AAAALAAQAAAACABAAAAALAAQAAAACABEAAAALAAQAAAACABIAAAALAAQAAAACABMAAAALAAQAAAACABQAAAALAAQAAAACABUAAAALAAQAAAACABYAAAALAAQAAAACABcAAAALAAQAAAACABgAAAALAAYAAAACABkAAAANAAUAAAD3/wsAAAAMAAQAAAD3/wwAAAALAAMAAAD3/w0AAAALAAQAAAD3/w4AAAALAAYAAAD3/w8AAAAMAAUAAAD4/w8AAAAMAAYAAAD5/w8AAAANAAYAAAD6/w8AAAANAAYAAAD7/w8AAAANAAYAAAD8/w8AAAANAAYAAAD9/w8AAAANAAYAAAD+/w8AAAANAAYAAAD4/wsAAAAMAAYAAAD5/wsAAAANAAYAAAD6/wsAAAANAAYAAAD7/wsAAAANAAYAAAD8/wsAAAANAAYAAAD9/wsAAAANAAYAAAD+/wsAAAANAAYAAAAAAAAAAAAMAAYAAAABAAAAAAAPAAYAAAAAABkAAAAMAAYAAAABABkAAAAPAAYAAAA=")
 tile_set = SubResource("TileSet_vl80j")
 
+[node name="Reset" type="Button" parent="." unique_id=2136266749]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 604.0
+offset_right = 320.0
+offset_bottom = 676.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_w7enk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_aputy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7paak")
+icon = ExtResource("9_ukj8e")
+icon_alignment = 1
+expand_icon = true
+
+[node name="buttonpress" type="AudioStreamPlayer2D" parent="." unique_id=1501906327]
+stream = ExtResource("13_5sqrc")
+
+[node name="selectionmade" type="AudioStreamPlayer2D" parent="." unique_id=1151778476]
+stream = ExtResource("14_ilk7v")
+
+[node name="perfect" type="TextureRect" parent="." unique_id=1646310788]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 91.99999
+offset_top = 237.99997
+offset_right = -1060.0
+offset_bottom = -354.00003
+rotation = -0.22514747
+scale = Vector2(1e-05, 1e-05)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("15_flkkw")
+
+[node name="great" type="TextureRect" parent="." unique_id=675769845]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 91.99999
+offset_top = 237.99997
+offset_right = -1060.0
+offset_bottom = -354.00003
+rotation = -0.22514747
+scale = Vector2(1e-05, 1e-05)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("16_hu0pd")
+
+[node name="ok" type="TextureRect" parent="." unique_id=743094426]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 91.99999
+offset_top = 237.99997
+offset_right = -1060.0
+offset_bottom = -354.00003
+rotation = -0.22514747
+scale = Vector2(1e-05, 1e-05)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("17_o5ifv")
+
+[node name="bad" type="TextureRect" parent="." unique_id=1016392400]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 91.99999
+offset_top = 237.99997
+offset_right = -1060.0
+offset_bottom = -354.00003
+rotation = -0.22514747
+scale = Vector2(1e-05, 1e-05)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("18_s2vcx")
+
+[node name="zero" type="TextureRect" parent="." unique_id=724691393]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 91.99999
+offset_top = 237.99997
+offset_right = -1060.0
+offset_bottom = -354.00003
+rotation = -0.22514747
+scale = Vector2(1e-05, 1e-05)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("19_38m54")
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]

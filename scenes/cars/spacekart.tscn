@@ -2,9 +2,15 @@
 
 [ext_resource type="Script" uid="uid://biqdg3iqnr03r" path="res://scripts/cars/spacekart.gd" id="1_ss6nn"]
 [ext_resource type="ArrayMesh" uid="uid://b7s4xgicwu31l" path="res://assets/cars/kart-oobi.fbx" id="2_uybwu"]
+[ext_resource type="AudioStream" uid="uid://f23ta5yopbpo" path="res://assets/sounds/carrun.ogg" id="3_uybwu"]
 
 [node name="spacekart" type="Node3D" unique_id=13251508]
 script = ExtResource("1_ss6nn")
 
 [node name="KartOobi" type="MeshInstance3D" parent="." unique_id=398421548]
 mesh = ExtResource("2_uybwu")
+
+[node name="carrunning" type="AudioStreamPlayer2D" parent="." unique_id=1813303255]
+position = Vector2(0, -1)
+stream = ExtResource("3_uybwu")
+volume_db = 4.0

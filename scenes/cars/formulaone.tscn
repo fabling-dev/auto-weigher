@@ -2,9 +2,15 @@
 
 [ext_resource type="ArrayMesh" uid="uid://xged6ccwkw1e" path="res://assets/cars/race.fbx" id="1_om0eu"]
 [ext_resource type="Script" uid="uid://dbarik55oqa8o" path="res://scripts/cars/formulaone.gd" id="1_r28gx"]
+[ext_resource type="AudioStream" uid="uid://f23ta5yopbpo" path="res://assets/sounds/carrun.ogg" id="3_shxmr"]
 
 [node name="formulaone" type="Node3D" unique_id=1674718321]
 script = ExtResource("1_r28gx")
 
 [node name="KartOobi" type="MeshInstance3D" parent="." unique_id=35146003]
 mesh = ExtResource("1_om0eu")
+
+[node name="carrunning" type="AudioStreamPlayer2D" parent="." unique_id=1194112111]
+position = Vector2(0, -1)
+stream = ExtResource("3_shxmr")
+volume_db = 4.0

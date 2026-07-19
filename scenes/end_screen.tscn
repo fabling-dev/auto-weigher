@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://d0lgjoyhm1auu"]
+
+[ext_resource type="Script" uid="uid://p5e0xyu28shg" path="res://scripts/end_screen.gd" id="1_87vmq"]
+[ext_resource type="PackedScene" uid="uid://20f587kmg4q4" path="res://scenes/sky.tscn" id="1_kq7ac"]
+[ext_resource type="Texture2D" uid="uid://b2bx8ov5ioym8" path="res://assets/icons/home.png" id="2_6e1uj"]
+[ext_resource type="Texture2D" uid="uid://cqx4gcuk15n7a" path="res://assets/icons/reset.png" id="3_87vmq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vj8vg"]
+bg_color = Color(0.5299, 0.7, 0.32199997, 1)
+skew = Vector2(0.5, 0)
+corner_radius_top_left = 30
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plosh"]
+bg_color = Color(0.25850004, 0.47, 0, 1)
+skew = Vector2(0.5, 0)
+corner_radius_top_left = 30
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4j4el"]
+bg_color = Color(0.37488008, 0.66, 0.026400015, 1)
+skew = Vector2(0.5, 0)
+corner_radius_top_left = 30
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jc7ji"]
+bg_color = Color(0.8409665, 0.3566236, 0.2422592, 1)
+skew = Vector2(0.5, 0)
+corner_radius_top_left = 30
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87vmq"]
+bg_color = Color(0.61, 0.120576695, 0.10370001, 1)
+skew = Vector2(0.5, 0)
+corner_radius_top_left = 30
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g44xs"]
+bg_color = Color(0.96, 0.16192, 0.13439998, 1)
+skew = Vector2(0.5, 0)
+corner_radius_top_left = 30
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+
+[node name="EndScreen" type="Node2D" unique_id=1135504920]
+script = ExtResource("1_87vmq")
+
+[node name="sky" type="SubViewportContainer" parent="." unique_id=689777633]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="SubViewport" type="SubViewport" parent="sky" unique_id=903998473]
+own_world_3d = true
+handle_input_locally = false
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="sky/SubViewport" unique_id=454947191]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.8710062, -0.4912719, 0, 0.4912719, 0.8710062, -5.115, 0, 0)
+
+[node name="SKY" parent="sky/SubViewport" unique_id=222311777 instance=ExtResource("1_kq7ac")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=109775495]
+offset_left = 531.0
+offset_top = 245.0
+offset_right = 764.0
+offset_bottom = 433.0
+
+[node name="restart" type="Button" parent="VBoxContainer" unique_id=2061541029]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_vj8vg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_plosh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4j4el")
+icon = ExtResource("3_87vmq")
+icon_alignment = 1
+expand_icon = true
+
+[node name="home" type="Button" parent="VBoxContainer" unique_id=882981937]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_jc7ji")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_87vmq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g44xs")
+icon = ExtResource("2_6e1uj")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=177217886]
+position = Vector2(640, 360)
+
+[connection signal="pressed" from="VBoxContainer/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer/home" to="." method="_on_home_pressed"]

@@ -2,9 +2,15 @@
 
 [ext_resource type="ArrayMesh" uid="uid://cscr8euvu4uxr" path="res://assets/cars/hatchback-sports.fbx" id="1_klhvj"]
 [ext_resource type="Script" uid="uid://ddlght6xoyy4a" path="res://scripts/cars/hatchback.gd" id="1_tn625"]
+[ext_resource type="AudioStream" uid="uid://f23ta5yopbpo" path="res://assets/sounds/carrun.ogg" id="3_8dyox"]
 
 [node name="hatchback" type="Node3D" unique_id=494099451]
 script = ExtResource("1_tn625")
 
 [node name="KartOobi" type="MeshInstance3D" parent="." unique_id=1862888088]
 mesh = ExtResource("1_klhvj")
+
+[node name="carrunning" type="AudioStreamPlayer2D" parent="." unique_id=419688264]
+position = Vector2(0, -1)
+stream = ExtResource("3_8dyox")
+volume_db = 4.0

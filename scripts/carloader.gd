@@ -1,5 +1,7 @@
 extends SubViewport
 
+@onready var carrunning: AudioStreamPlayer2D = %carrunning
+
 const CARS = {
 	"ambulance" : preload("res://scenes/cars/ambulance.tscn"),
 	"spacekart" : preload("res://scenes/cars/spacekart.tscn"),
@@ -19,15 +21,22 @@ const CARS = {
 	"grbtruck" : preload("res://scenes/cars/grbtruck.tscn")
 }
 
+func _ready() -> void:
+	GM.carwentboom.connect(stopmusic)
+
 func _process(_delta: float) -> void:
 	if !GM.carexist:
 		carspawn()
 
 func carspawn() -> void:
 	var carnames: Array = CARS.keys()
-	var car: String = carnames.slice(0,4*GM.level).pick_random()
+	var car: String = carnames.slice(0,4*GM.level).pick_random() 
 	var spawned_car : Node = CARS[car].instantiate()
 	add_child(spawned_car)
 	GM.carname = spawned_car.ID
 	GM.setcarweight()
 	GM.carexist = true
+	carrunning.play()
+
+func stopmusic() -> void:
+	carrunning.stop()

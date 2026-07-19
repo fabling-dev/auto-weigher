@@ -2,9 +2,15 @@
 
 [ext_resource type="ArrayMesh" uid="uid://d3byvtpn72pqg" path="res://assets/cars/police.fbx" id="1_jre7e"]
 [ext_resource type="Script" uid="uid://dtn7u4a05qoha" path="res://scripts/cars/police.gd" id="1_wiel2"]
+[ext_resource type="AudioStream" uid="uid://f23ta5yopbpo" path="res://assets/sounds/carrun.ogg" id="3_5pgbc"]
 
 [node name="police" type="Node3D" unique_id=821208610]
 script = ExtResource("1_wiel2")
 
 [node name="KartOobi" type="MeshInstance3D" parent="." unique_id=1179623940]
 mesh = ExtResource("1_jre7e")
+
+[node name="carrunning" type="AudioStreamPlayer2D" parent="." unique_id=200504216]
+position = Vector2(0, -1)
+stream = ExtResource("3_5pgbc")
+volume_db = 4.0

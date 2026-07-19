@@ -2,9 +2,15 @@
 
 [ext_resource type="Script" uid="uid://ccsbfvmef3jj1" path="res://scripts/cars/firetruck.gd" id="1_1qa0c"]
 [ext_resource type="ArrayMesh" uid="uid://o1e0458v32u5" path="res://assets/cars/firetruck.fbx" id="1_88yud"]
+[ext_resource type="AudioStream" uid="uid://f23ta5yopbpo" path="res://assets/sounds/carrun.ogg" id="3_otcs8"]
 
 [node name="firetruck" type="Node3D" unique_id=1615981204]
 script = ExtResource("1_1qa0c")
 
 [node name="KartOobi" type="MeshInstance3D" parent="." unique_id=743856361]
 mesh = ExtResource("1_88yud")
+
+[node name="carrunning" type="AudioStreamPlayer2D" parent="." unique_id=1511229898]
+position = Vector2(0, -1)
+stream = ExtResource("3_otcs8")
+volume_db = 4.0
